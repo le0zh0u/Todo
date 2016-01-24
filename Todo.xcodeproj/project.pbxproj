@@ -14,6 +14,7 @@
 		9053F34E1C549E17003E4354 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9053F34C1C549E17003E4354 /* LaunchScreen.storyboard */; };
 		9053F3591C549E17003E4354 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053F3581C549E17003E4354 /* TodoTests.swift */; };
 		9053F3641C549E17003E4354 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053F3631C549E17003E4354 /* TodoUITests.swift */; };
+		9053F3721C54DA13003E4354 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053F3711C54DA13003E4354 /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9053F35F1C549E17003E4354 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9053F3631C549E17003E4354 /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		9053F3651C549E17003E4354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9053F3711C54DA13003E4354 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				9053F34A1C549E17003E4354 /* Assets.xcassets */,
 				9053F34C1C549E17003E4354 /* LaunchScreen.storyboard */,
 				9053F34F1C549E17003E4354 /* Info.plist */,
+				9053F3711C54DA13003E4354 /* TodoModel.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9053F3721C54DA13003E4354 /* TodoModel.swift in Sources */,
 				9053F3461C549E17003E4354 /* ViewController.swift in Sources */,
 				9053F3441C549E17003E4354 /* AppDelegate.swift in Sources */,
 			);

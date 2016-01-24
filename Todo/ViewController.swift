@@ -8,11 +8,29 @@
 
 import UIKit
 
+
+//data base
+var todos : [TodoModel] = []
+
+func dateFromString(dateStr:String) -> NSDate{
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    let date = dateFormatter.dateFromString(dateStr)
+    return date!;
+}
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        todos = [TodoModel(id: "1", image: "child-selected", title: "1.去游乐场", date: dateFromString("2015-01-01")),
+                TodoModel(id: "2", image: "shopping-cart-selected", title: "2.去购物", date: dateFromString("2015-02-03")),
+                TodoModel(id: "3", image: "phone-selected", title: "3.打电话", date: dateFromString("2015-03-05")),
+                TodoModel(id: "4", image: "travel-selected", title: "4.Travel to Europe", date: dateFromString("2015-09-09"))]
     }
 
     override func didReceiveMemoryWarning() {
