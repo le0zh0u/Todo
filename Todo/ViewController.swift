@@ -19,7 +19,7 @@ func dateFromString(dateStr:String) -> NSDate{
     return date!;
 }
 
-class ViewController: UIViewController,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,6 +31,8 @@ class ViewController: UIViewController,UITableViewDataSource {
                 TodoModel(id: "2", image: "shopping-cart-selected", title: "2.去购物", date: dateFromString("2015-02-03")),
                 TodoModel(id: "3", image: "phone-selected", title: "3.打电话", date: dateFromString("2015-03-05")),
                 TodoModel(id: "4", image: "travel-selected", title: "4.Travel to Europe", date: dateFromString("2015-09-09"))]
+        
+        navigationItem.leftBarButtonItem = editButtonItem();
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +64,19 @@ class ViewController: UIViewController,UITableViewDataSource {
         date.text = dateFormatter.stringFromDate(todo.date)
         
         return cell
+    }
+    
+    //UITableViewDelegate
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete{
+            todos.removeAtIndex(indexPath.row)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
+    override func setEditing(editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        self.tableView.setEditing(editing, animated: animated)
     }
 
 
