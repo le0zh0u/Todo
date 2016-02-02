@@ -15,6 +15,7 @@
 		9053F3591C549E17003E4354 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053F3581C549E17003E4354 /* TodoTests.swift */; };
 		9053F3641C549E17003E4354 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053F3631C549E17003E4354 /* TodoUITests.swift */; };
 		9053F3721C54DA13003E4354 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053F3711C54DA13003E4354 /* TodoModel.swift */; };
+		90CD20951C610AFB003E4CF9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CD20941C610AFB003E4CF9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9053F3631C549E17003E4354 /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		9053F3651C549E17003E4354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9053F3711C54DA13003E4354 /* TodoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		90CD20941C610AFB003E4CF9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9053F34C1C549E17003E4354 /* LaunchScreen.storyboard */,
 				9053F34F1C549E17003E4354 /* Info.plist */,
 				9053F3711C54DA13003E4354 /* TodoModel.swift */,
+				90CD20941C610AFB003E4CF9 /* DetailViewController.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				9053F3721C54DA13003E4354 /* TodoModel.swift in Sources */,
 				9053F3461C549E17003E4354 /* ViewController.swift in Sources */,
 				9053F3441C549E17003E4354 /* AppDelegate.swift in Sources */,
+				90CD20951C610AFB003E4CF9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +490,7 @@
 				9053F36A1C549E17003E4354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9053F36B1C549E17003E4354 /* Build configuration list for PBXNativeTarget "TodoTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +499,7 @@
 				9053F36D1C549E17003E4354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9053F36E1C549E17003E4354 /* Build configuration list for PBXNativeTarget "TodoUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +508,7 @@
 				9053F3701C549E17003E4354 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
