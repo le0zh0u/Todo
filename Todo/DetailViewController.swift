@@ -34,16 +34,28 @@ class DetailViewController: UIViewController {
         travelButton.selected = false
     }
     @IBAction func childTapped(sender: AnyObject) {
+        resetButtons()
+        childButton.selected = true
+        
     }
     @IBAction func phoneTapped(sender: AnyObject) {
+        resetButtons()
+        phoneButton.selected = true
+        
     }
     @IBAction func shoppingCartTapped(sender: AnyObject) {
+        resetButtons()
+        shoppingCartButton.selected = true
+        
     }
     @IBAction func travelTapped(sender: AnyObject) {
+        resetButtons()
+        travelButton.selected = true
+        
     }
     @IBAction func okTapped(sender: AnyObject) {
     }
-
+    
     /*
     // MARK: - Navigation
 
