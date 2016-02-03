@@ -129,6 +129,7 @@
                                 <state key="normal" title="确认"/>
                                 <connections>
                                     <action selector="okTapped:" destination="Xyh-cQ-CIJ" eventType="touchUpInside" id="NpM-zo-UDX"/>
+                                    <segue destination="brp-n3-8Ad" kind="unwind" unwindAction="close:" id="bJv-Jb-aDv"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VHC-9W-Owk">
@@ -151,6 +152,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="We2-i7-xYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="brp-n3-8Ad" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1113" y="299"/>
         </scene>

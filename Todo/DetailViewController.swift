@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var childButton: UIButton!
     @IBOutlet weak var phoneButton: UIButton!
@@ -19,6 +19,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        todoItem.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -54,8 +55,33 @@ class DetailViewController: UIViewController {
         
     }
     @IBAction func okTapped(sender: AnyObject) {
+        var image = ""
+        if childButton.selected {
+            image = "child-selected"
+        }else if phoneButton.selected {
+            image = "phone-selected"
+        }else if shoppingCartButton.selected {
+            image = "shopping-cart-selected"
+        }else if travelButton.selected {
+            image = "ctravel-selected"
+        }
+        let uuid = NSUUID().UUIDString
+        
+        let todo = TodoModel(id: uuid, image: image, title: todoItem.text!, date: todoDate.date)
+        
+        todos.append(todo)
+        
     }
     
+    //自动关闭键盘
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        todoItem.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        todoItem.resignFirstResponder()
+    }
     /*
     // MARK: - Navigation
 
