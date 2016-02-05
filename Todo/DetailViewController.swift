@@ -16,10 +16,36 @@ class DetailViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var travelButton: UIButton!
     @IBOutlet weak var todoItem: UITextField!
     @IBOutlet weak var todoDate: UIDatePicker!
+    
+    var todo:TodoModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         todoItem.delegate = self
+        
+        if todo == nil {
+            navigationItem.title = "新增Todo"
+            childButton.selected = true
+        }
+        else {
+            navigationItem.title = "修改Todo"
+            todoItem.text = todo?.title
+            todoDate.setDate((todo?.date)!, animated: false)
+            
+            if todo?.image == "child-selected" {
+                childButton.selected = true
+            }
+            else if todo?.image == "phone-selected" {
+                phoneButton.selected = true
+            }
+            else if todo?.image == "shopping-cart-selected" {
+                shoppingCartButton.selected = true
+            }
+            else if todo?.image == "travel-selected" {
+                travelButton.selected = true
+            }
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -65,11 +91,16 @@ class DetailViewController: UIViewController,UITextFieldDelegate {
         }else if travelButton.selected {
             image = "ctravel-selected"
         }
-        let uuid = NSUUID().UUIDString
-        
-        let todo = TodoModel(id: uuid, image: image, title: todoItem.text!, date: todoDate.date)
-        
-        todos.append(todo)
+        if todo == nil {
+            let uuid = NSUUID().UUIDString
+            todo = TodoModel(id: uuid, image: image, title: todoItem.text!, date: todoDate.date)
+            todos.append(todo!)
+
+        }else {
+            todo?.image = image
+            todo?.title = todoItem.text!
+            todo?.date = todoDate.date
+        }
         
     }
     

@@ -83,6 +83,17 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         print("closed")
         tableView.reloadData()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "EditTodo" {
+            let vc = segue.destinationViewController as! DetailViewController
+            let indexPath = tableView.indexPathForSelectedRow
+            if let index = indexPath{
+                vc.todo = todos[index.row]
+            }
+        }
+        
+    }
 
 
 }
